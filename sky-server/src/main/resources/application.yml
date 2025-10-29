@@ -14,10 +14,14 @@ spring:
     username: ${sky.datasource.username}
     password: ${sky.datasource.password}
 
-#    url: jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true #数据库连接地址
-#    driver-class-name: com.mysql.cj.jdbc.Driver #数据库驱动
-#    username: root #用户名
-#    password: 756756 #密码
+  data:
+    redis:
+      host: ${sky.data.redis.host}
+      port: ${sky.data.redis.port}
+#      password: ${sky.data.redis.password}
+      database: ${sky.data.redis.database}
+
+
 mybatis:
   #mapper配置文件
   mapper-locations: classpath:mapper/*.xml
